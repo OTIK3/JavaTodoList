@@ -18,7 +18,6 @@ public class TaskControllerImpl implements TaskController{
     private final TaskService taskService;
     private Scanner in = new Scanner(System.in);
 
-
     public void add() {
         TaskRequest taskRequest = this.createRequest();
         Integer id = taskService.addTask(taskRequest);
@@ -81,14 +80,14 @@ public class TaskControllerImpl implements TaskController{
     }
 
     private TaskRequest createRequest() {
-        System.out.println("""
+        System.out.print("""
                 Интерфейс для создания запроса
                 Введите необходимые параметры:
                 """);
         String name = this.printf("Название");
         String description = this.printf("Описание");
         Supplier<LocalDate> supplier = () -> {
-            System.out.print("Время в формате(): ");
+            System.out.print("Время в формате(yyyy-mm-dd): ");
             String timeLimitString = in.nextLine();
             return LocalDate.parse(timeLimitString);
         };

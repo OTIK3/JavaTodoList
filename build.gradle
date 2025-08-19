@@ -22,7 +22,7 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17) // Используйте ту же версию, что и для запуска
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 

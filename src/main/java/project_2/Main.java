@@ -23,7 +23,7 @@ public class Main {
     public static void main(String[] args) {
         TaskController loggingTaskController = TaskControllerHandler.createProxy(TASK_CONTROLLER_IMPL, TaskController.class);
         while (true) {
-            System.out.print("Введите команду -> ");
+            System.out.print("\nВведите команду -> ");
             String command = new Scanner(System.in).nextLine();
             command(command, loggingTaskController);
         }
