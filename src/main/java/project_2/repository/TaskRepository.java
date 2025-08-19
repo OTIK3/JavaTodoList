@@ -34,10 +34,16 @@ public class TaskRepository {
         return new ArrayList<>(TASKS);
     }
 
+    public void clear() {
+        TASKS.clear();
+    }
+
     private void validIndex(Integer index) {
         if (index < 0 || TASKS.size() <= index) {
             throw new TaskNotFoundException(index);
         }
     }
+
+
 
 }
